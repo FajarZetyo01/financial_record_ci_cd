@@ -29,7 +29,7 @@
 
                         <form action="/login" method="POST">
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email address <span
+                                <label for="email" class="form-label fw-bold">Email address <span
                                         class="text-danger">*</span></label>
                                 <input type="email" class="form-control {{ if .validation.Email }} is-invalid {{ end }}"
                                     id="email" name="email" value="{{ .login.Email }}" placeholder="Enter email" />
@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="password" class="form-label">Password <span
+                                <label for="password" class="form-label fw-bold">Password <span
                                         class="text-danger">*</span></label>
                                 <input type="password"
                                     class="form-control {{ if .validation.Password }} is-invalid {{ end }}"
