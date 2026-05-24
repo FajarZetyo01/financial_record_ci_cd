@@ -9,7 +9,7 @@ import (
 
 func Route(db *sql.DB, mux *http.ServeMux) {
 
-	// REDIRECT ROOT 1
+	// REDIRECT ROOT 12
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
 		if r.URL.Path != "/" {
