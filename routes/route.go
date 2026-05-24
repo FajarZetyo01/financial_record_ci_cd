@@ -8,6 +8,10 @@ import (
 )
 
 func Route(db *sql.DB, mux *http.ServeMux) {
+	// REDIRECT ROOT
+	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "/login", http.StatusFound)
+	})
 	//AUTH CONTROLLER
 	authController := controllers.NewAuthController(db)
 	mux.HandleFunc("/register", helpers.GuestOnly(authController.Register))
