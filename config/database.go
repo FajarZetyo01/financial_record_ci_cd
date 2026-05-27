@@ -28,6 +28,8 @@ func InitDatabase() *sql.DB {
 	//log.Println("Berhasil konek ke database")
 	//return db
 
+	//INI ADALAH DATABASE AWS RDS
+
 	dbUser := "admin"
 	dbPass := "kExAMAF22AzpH3frN7QD"
 	dbName := "financial_record"
