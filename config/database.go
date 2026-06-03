@@ -8,6 +8,7 @@ import (
 )
 
 func InitDatabase() *sql.DB {
+	//INI ADALAH DATABASE LOKAL MYSQL
 	//dbUser := "root"
 	//dbPass := "root"
 	//dbName := "financial_record"
