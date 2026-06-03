@@ -1,3 +1,4 @@
+#//INI ADALAH DEPLOY CI/CD SEDERHANA
 name: Deploy Golang App Financial Record
 
 on:
