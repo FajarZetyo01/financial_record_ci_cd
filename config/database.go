@@ -9,45 +9,45 @@ import (
 
 func InitDatabase() *sql.DB {
 	//INI ADALAH DATABASE LOKAL MYSQL
-	//dbUser := "root"
-	//dbPass := "root"
-	//dbName := "financial_record"
-	//dbHost := "127.0.0.1"
-	//dbPort := "3306"
-	//dbDriver := "mysql"
-	//
-	//dsn := dbUser + ":" + dbPass + "@tcp(" + dbHost + ":" + dbPort + ")/" + dbName + "?parseTime=true&loc=Local"
-	//db, err := sql.Open(dbDriver, dsn)
-	//if err != nil {
-	//	log.Fatalln("Gagal koneksi ke database", err)
-	//}
-	//if err := db.Ping(); err != nil {
-	//	log.Fatalln("Gagal ping ke database", err)
-	//}
-	////errPing:= db.Ping()
-	////if errPing!= nil{}
-	//log.Println("Berhasil konek ke database")
-	//return db
-
-	//INI ADALAH DATABASE AWS RDS
-
-	dbUser := "admin"
-	dbPass := "kExAMAF22AzpH3frN7QD"
+	dbUser := "root"
+	dbPass := "root"
 	dbName := "financial_record"
-	dbHost := "database-testing.cvagmsww6fzb.ap-southeast-3.rds.amazonaws.com"
+	dbHost := "127.0.0.1"
 	dbPort := "3306"
 	dbDriver := "mysql"
+
 	dsn := dbUser + ":" + dbPass + "@tcp(" + dbHost + ":" + dbPort + ")/" + dbName + "?parseTime=true&loc=Local"
 	db, err := sql.Open(dbDriver, dsn)
 	if err != nil {
-		log.Fatalln("Gagal koneksi ke database:", err)
+		log.Fatalln("Gagal koneksi ke database", err)
 	}
-
 	if err := db.Ping(); err != nil {
-		log.Fatalln("Gagal ping ke database:", err)
+		log.Fatalln("Gagal ping ke database", err)
 	}
-	log.Println("Berhasil konek ke database AWS RDS")
+	//errPing:= db.Ping()
+	//if errPing!= nil{}
+	log.Println("Berhasil konek ke database")
 	return db
+
+	//INI ADALAH DATABASE AWS RDS
+
+	//dbUser := "admin"
+	//dbPass := "kExAMAF22AzpH3frN7QD"
+	//dbName := "financial_record"
+	//dbHost := "database-testing.cvagmsww6fzb.ap-southeast-3.rds.amazonaws.com"
+	//dbPort := "3306"
+	//dbDriver := "mysql"
+	//dsn := dbUser + ":" + dbPass + "@tcp(" + dbHost + ":" + dbPort + ")/" + dbName + "?parseTime=true&loc=Local"
+	//db, err := sql.Open(dbDriver, dsn)
+	//if err != nil {
+	//	log.Fatalln("Gagal koneksi ke database:", err)
+	//}
+	//
+	//if err := db.Ping(); err != nil {
+	//	log.Fatalln("Gagal ping ke database:", err)
+	//}
+	//log.Println("Berhasil konek ke database AWS RDS")
+	//return db
 }
 
 //parseTime=true, untuk insert data waktu ke database
